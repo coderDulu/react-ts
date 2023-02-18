@@ -93,7 +93,7 @@ module.exports = {
   devServer: {
     host: 'localhost',
     port: 3000,
-    open: false,
+    open: true,
     historyApiFallback: true, // 解决前端路由刷新404问题
    /*  static: {
       directory: path.resolve(__dirname, 'static'),
@@ -101,12 +101,6 @@ module.exports = {
     }, */
     compress: false,
     hot: true,
-  /*   proxy: {
-      '/api': {
-        target: 'http://172.16.3.178/cgi-bin/web.fcgi',
-        pathRewrite: {'^/api': ''}
-      }
-    } */
   },
   resolve: {
     alias: {
@@ -153,11 +147,4 @@ module.exports = {
       chunks: 'all'
     }
   },
-  // cache: {
-  //   type: 'filesystem',
-  //   buildDependencies: {
-  //     // 推荐在 webpack 配置中设置 cache.buildDependencies.config: [__filename] 来获取最新配置以及所有依赖项
-  //     config: [__filename]
-  //   }
-  // }
 }
